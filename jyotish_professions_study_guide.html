@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astrology of Professions — Jyotish Acharya Study Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --gold: #C9A84C;
+    --deep: #1A1410;
+    --ink: #2C2318;
+    --parchment: #F5EDD8;
+    --warm: #E8D9B5;
+    --rust: #8B4513;
+    --accent: #D4870A;
+    --jade: #2D6B4F;
+    --midnight: #0F0C08;
+    --muted: #7A6A52;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--midnight);
+    color: var(--parchment);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, #1A1410 0%, #2C1810 50%, #1A1410 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 40px 24px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '☉ ☽ ♂ ☿ ♃ ♀ ♄';
+    position: absolute;
+    top: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 8px;
+    color: var(--gold);
+    opacity: 0.4;
+  }
+  header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 5vw, 44px);
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  header .subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  header .byline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--warm);
+    opacity: 0.8;
+  }
+
+  /* NAV TABS */
+  nav {
+    background: var(--ink);
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+    display: flex;
+    overflow-x: auto;
+    padding: 0 12px;
+    gap: 2px;
+    scrollbar-width: none;
+  }
+  nav::-webkit-scrollbar { display: none; }
+  nav button {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  nav button:hover { color: var(--warm); }
+  nav button.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  /* MAIN */
+  main { max-width: 900px; margin: 0 auto; padding: 24px 16px 60px; }
+
+  section { display: none; }
+  section.active { display: block; }
+
+  /* CARDS */
+  .card {
+    background: linear-gradient(135deg, #1C1610 0%, #221A0F 100%);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin-bottom: 18px;
+  }
+  .card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card-title .emoji { font-size: 20px; }
+
+  /* SECTION TITLE */
+  .section-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 700;
+    color: var(--gold);
+    margin: 8px 0 20px;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+    padding-bottom: 10px;
+  }
+  .section-intro {
+    color: var(--warm);
+    font-style: italic;
+    margin-bottom: 22px;
+    opacity: 0.85;
+    font-size: 14px;
+  }
+
+  /* TABLE */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 12px 0;
+  }
+  th {
+    background: rgba(201,168,76,0.15);
+    color: var(--gold);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+  }
+  td {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: var(--parchment);
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+  tr:hover td { background: rgba(201,168,76,0.05); }
+
+  /* MNEMONICS / AIDE BOX */
+  .mnemonic {
+    background: linear-gradient(135deg, rgba(45,107,79,0.2), rgba(45,107,79,0.08));
+    border: 1px solid rgba(45,107,79,0.5);
+    border-left: 3px solid var(--jade);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .mnemonic .label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #5CBB8A;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .mnemonic strong { color: #5CBB8A; }
+
+  /* SHORTCUT BOX */
+  .shortcut {
+    background: rgba(212,135,10,0.1);
+    border: 1px solid rgba(212,135,10,0.4);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .shortcut .label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  /* EXAM ALERT */
+  .exam-alert {
+    background: rgba(139,69,19,0.2);
+    border: 1px solid rgba(139,69,19,0.5);
+    border-left: 3px solid var(--rust);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #E8C4A0;
+  }
+  .exam-alert .label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #E8924A;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  /* PILL TAGS */
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .tag {
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-family: 'Space Mono', monospace;
+    color: var(--warm);
+  }
+  .tag.planet { background: rgba(45,107,79,0.15); border-color: rgba(45,107,79,0.4); color: #7DD4A8; }
+  .tag.house { background: rgba(212,135,10,0.12); border-color: rgba(212,135,10,0.35); color: #F0B860; }
+
+  /* QUIZ */
+  .quiz-q {
+    background: var(--ink);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .quiz-q:hover { border-color: rgba(201,168,76,0.5); }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: var(--parchment);
+    margin-bottom: 8px;
+  }
+  .quiz-q .q-number {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+  .options { display: none; margin-top: 10px; }
+  .options.show { display: block; }
+  .option {
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin: 4px 0;
+    font-size: 13px;
+    border: 1px solid rgba(255,255,255,0.08);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .option:hover { background: rgba(201,168,76,0.1); border-color: var(--gold); }
+  .option.correct { background: rgba(45,107,79,0.3); border-color: var(--jade); color: #7DD4A8; }
+  .option.wrong { background: rgba(139,69,19,0.3); border-color: var(--rust); color: #E8A080; }
+  .option.revealed { background: rgba(45,107,79,0.15); border-color: rgba(45,107,79,0.4); color: #7DD4A8; }
+
+  /* TOGGLE ACCORDION */
+  .accordion-item {
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 6px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  .accordion-header {
+    padding: 12px 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.02);
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .accordion-header:hover { background: rgba(201,168,76,0.08); }
+  .accordion-header .chevron { color: var(--gold); transition: transform 0.2s; font-size: 12px; }
+  .accordion-header.open .chevron { transform: rotate(180deg); }
+  .accordion-body { display: none; padding: 14px 16px; font-size: 13px; border-top: 1px solid rgba(201,168,76,0.15); }
+  .accordion-body.show { display: block; }
+
+  /* PROFESSION CARDS */
+  .profession-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin: 16px 0;
+  }
+  .prof-card {
+    background: linear-gradient(135deg, #1C1610, #241C10);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 13px;
+  }
+  .prof-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: var(--gold);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .prof-card ul { padding-left: 16px; color: var(--warm); }
+  .prof-card li { margin-bottom: 4px; }
+  .prof-card .key-combo {
+    background: rgba(201,168,76,0.08);
+    border-radius: 4px;
+    padding: 6px 8px;
+    margin-top: 8px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    border-left: 2px solid var(--accent);
+  }
+
+  /* PLANET TABLE */
+  .planet-symbol { font-size: 16px; }
+
+  /* BULLET LISTS */
+  ul.styled { padding-left: 0; list-style: none; }
+  ul.styled li {
+    padding: 6px 0 6px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    position: relative;
+    font-size: 13px;
+    color: var(--warm);
+  }
+  ul.styled li::before { content: '◈'; position: absolute; left: 0; color: var(--gold); font-size: 10px; top: 9px; }
+
+  /* PROGRESS BAR */
+  .progress-bar {
+    background: rgba(255,255,255,0.08);
+    border-radius: 4px;
+    height: 4px;
+    margin: 12px 0;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--jade), var(--gold));
+    border-radius: 4px;
+    transition: width 0.5s ease;
+  }
+
+  /* SCORE */
+  #quiz-score {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 10px;
+  }
+
+  /* HR */
+  hr { border: none; border-top: 1px solid rgba(201,168,76,0.2); margin: 20px 0; }
+
+  /* inline code */
+  code {
+    background: rgba(255,255,255,0.06);
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--accent);
+  }
+
+  p { color: var(--warm); font-size: 13.5px; margin-bottom: 10px; }
+  b, strong { color: var(--parchment); font-weight: 600; }
+
+  .highlight { color: var(--gold); font-weight: 600; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media(max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* FOOTER NOTE */
+  .footer-note {
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(201,168,76,0.15);
+    text-transform: uppercase;
+  }
+
+  /* Scroll fade in */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  section.active .card, section.active .prof-card, section.active .quiz-q {
+    animation: fadeUp 0.3s ease both;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Astrology of Professions</h1>
+  <div class="subtitle">Jyotish Acharya Exam Study Guide · Col. A.K. Gour</div>
+  <div class="byline">Complete Study System with Memory Aids, Mnemonics & Exam Focus</div>
+</header>
+
+<nav>
+  <button class="active" onclick="showTab('overview')">Overview</button>
+  <button onclick="showTab('planets')">Planets & Professions</button>
+  <button onclick="showTab('houses')">Houses & Signs</button>
+  <button onclick="showTab('specific')">Specific Professions</button>
+  <button onclick="showTab('principles')">Key Principles</button>
+  <button onclick="showTab('yogas')">Two-Planet Yogas</button>
+  <button onclick="showTab('quiz')">Practice Quiz</button>
+  <button onclick="showTab('mnemonics')">Quick Reference</button>
+</nav>
+
+<main>
+
+<!-- ===== OVERVIEW ===== -->
+<section id="overview" class="active">
+  <h2 class="section-heading">Foundation Framework</h2>
+  <p class="section-intro">Based on Col. A.K. Gour's "Astrology of Professions" (BVB / K.N. Rao Institute). Master the 4-pillar framework before memorising specific professions.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🏛️</span> The 4-Pillar Exam Framework</div>
+    <p>Every profession question on the Acharya exam can be solved by checking these four pillars in sequence:</p>
+    <div class="shortcut">
+      <div class="label">🔑 Master Formula — "HPDY"</div>
+      <strong>H</strong>ouses → <strong>P</strong>lanets → <strong>D</strong>ivisional charts → <strong>Y</strong>oga + Dasha<br><br>
+      Think: <em>"Happy People Don't Yield"</em> — the 4 things you check for every profession
+    </div>
+    <table>
+      <tr><th>Pillar</th><th>What to Check</th><th>Key Charts</th></tr>
+      <tr><td><strong>Houses</strong></td><td>5H (education), 10H (profession), 6H (service/disease), 2H, 9H, 11H</td><td>Natal</td></tr>
+      <tr><td><strong>Planets</strong></td><td>10L, 5L, LL, AmK (Amatyakarak), AK (Atmakarak)</td><td>Natal + Navamsha</td></tr>
+      <tr><td><strong>Divisional</strong></td><td>D-9 (Navamsha), D-10 (Dashamsha), D-24 (education)</td><td>Varga charts</td></tr>
+      <tr><td><strong>Yoga + Dasha</strong></td><td>Raja yogas, Jaimini karakas, dasha timing at ages 20–50</td><td>All three</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">📐</span> The Three Most Important Reference Points</div>
+    <div class="mnemonic">
+      <div class="label">📖 Varahmihir's Rule (Brihat Jataka)</div>
+      Always judge 10th house from whichever is strongest: <strong>Lagna, Moon, or Sun</strong>.<br>
+      The Navamsha lord of the 10th lord = the primary profession planet.<br><br>
+      <strong>If Benefics in 11H + 1H + 2H → native earns from many sources.</strong>
+    </div>
+    <table>
+      <tr><th>Planet in 10H</th><th>Source of Income (Varahmihir)</th></tr>
+      <tr><td>☉ Sun</td><td>Father</td></tr>
+      <tr><td>☽ Moon</td><td>Mother</td></tr>
+      <tr><td>♂ Mars</td><td>A foe / enemy</td></tr>
+      <tr><td>☿ Mercury</td><td>A friend</td></tr>
+      <tr><td>♃ Jupiter</td><td>Brother</td></tr>
+      <tr><td>♀ Venus</td><td>Wife</td></tr>
+      <tr><td>♄ Saturn</td><td>Servants / employees</td></tr>
+    </table>
+    <div class="mnemonic">
+      <div class="label">Memory Hook — "Father Mother Foe Friend Brother Wife Servants"</div>
+      <strong>F-M-F-F-B-W-S</strong> → Sun Moon Mars Mercury Jupiter Venus Saturn<br>
+      Say: <em>"Fat Moms Fight Fiercely, Brothers Watch Silently"</em>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🎯</span> AmK (Amatyakarak) — The Career Indicator</div>
+    <p>The <strong>Amatyakarak (AmK)</strong> is the planet with the <em>second-highest longitude</em> (ignoring signs). It is the single most important indicator of career/profession in Jaimini system.</p>
+    <ul class="styled">
+      <li>AmK aspected or conjunct with Dara Karaka (DK) = <strong>Rise in life</strong> (True)</li>
+      <li>AmK strong, in Kendra/3H/11H from Lagna = <strong>High-profile career</strong></li>
+      <li>AmK in transit influencing MD/AD, or in 10H/11H from them = <strong>Time of first salary / career start</strong></li>
+      <li>AMK and MK in 10th house = <strong>Official travelling / change in job</strong></li>
+      <li>AMK + 8P + 5P in 10H = <strong>Change of profile with promotion</strong></li>
+    </ul>
+    <div class="exam-alert">
+      <div class="label">⚠️ Exam Trap</div>
+      Q: "Strength and placement of AmK is an indicator of work profile" → Answer: <strong>TRUE</strong><br>
+      Q: "Connection of 3,9,12 houses with Venus" → <strong>Export / fashion designing / foreign work</strong>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">📊</span> Service vs. Self-Employment — The 7 Principles</div>
+    <p>Col. Gour's seven principles to distinguish service from self-employment:</p>
+    <div class="shortcut">
+      <div class="label">Memory: "P-P-S-6-D-3-J"</div>
+      <strong>P</strong>lanets (7th–12th or 10th–3rd houses) → <strong>P</strong>oorna Paramatmamsa planets → <strong>S</strong>aturn's influence on 10H/10L → <strong>6</strong>th house vs LL → <strong>D</strong>han yogas → <strong>3</strong>rd house/lord with 10H/L → <strong>J</strong>ndu Lagna
+    </div>
+    <table>
+      <tr><th>#</th><th>Principle</th><th>Indicates Service When…</th></tr>
+      <tr><td>1</td><td>Planet concentration</td><td>5+ planets in 7H–12H or 10H–3H = Self-employment; but Saturn influence on 10H pulls toward service</td></tr>
+      <tr><td>2</td><td>Poorna Paramatmamsa (Sun, Moon, Mars, Rahu)</td><td>2+ of these in visible half (7H–12H) = Self-employed</td></tr>
+      <tr><td>3</td><td>Saturn's PAC with 10H/10L</td><td>Saturn's strong PAC with 10H/L = <strong>Service</strong></td></tr>
+      <tr><td>4</td><td>6H/L vs LL strength</td><td>6th house/lord stronger than LL = <strong>Service</strong></td></tr>
+      <tr><td>5</td><td>Dhan Yogas</td><td>Dhan yogas present = may incline toward self-employment for wealth</td></tr>
+      <tr><td>6</td><td>3H/L PAC with 10H/L</td><td>3rd house link = self-employed; independent, hardworking</td></tr>
+      <tr><td>7</td><td>Indu Lagna</td><td>Additional wealth indicator</td></tr>
+    </table>
+    <div class="exam-alert">
+      <div class="label">⚠️ KEY RULE (Exam Favourite)</div>
+      <strong>If 6th lord is stronger than Lagna lord → Service profession.</strong><br>
+      If 5+ planets in 7H–12H or 10H–3H → likely Self-employed. But if Saturn or 6H also strong → high-post service officer.
+    </div>
+  </div>
+</section>
+
+<!-- ===== PLANETS ===== -->
+<section id="planets">
+  <h2 class="section-heading">Planets & Their Professions</h2>
+  <p class="section-intro">Three classical systems: Varahmihir (Brihat Jataka), Hardeo Sharma Trivedi, and K.N. Rao's liberal/technical framework. Know all three for exam.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">☀️</span> Planet Significations — Quick Reference</div>
+    <table>
+      <tr>
+        <th>Planet</th>
+        <th>Varahmihir (Brihat Jataka)</th>
+        <th>Key Modern Professions</th>
+        <th>Hardeo Sharma (NavamshKey)</th>
+      </tr>
+      <tr>
+        <td><strong>☉ Sun</strong></td>
+        <td>Govt service, jewellers, goldsmiths, mints, ministers, kings</td>
+        <td>Administration, politics, gold, teaching, astrology</td>
+        <td>Medicines, grains, gold, jewels, sports, holy work</td>
+      </tr>
+      <tr>
+        <td><strong>☽ Moon</strong></td>
+        <td>Sailors, nurses, fishermen, pearl dealers, midwives</td>
+        <td>Catering, dairy, hotel, nursing, liquids</td>
+        <td>Royalty, cloth, water products, farming, entertainment</td>
+      </tr>
+      <tr>
+        <td><strong>♂ Mars</strong></td>
+        <td>Military, doctors, chemists, butchers, iron/fire workers</td>
+        <td>Engineer, surgeon, police, army, dentist</td>
+        <td>War, metals, contractors, gambling, thieving</td>
+      </tr>
+      <tr>
+        <td><strong>☿ Mercury</strong></td>
+        <td>Writers, accountants, mathematicians, lawyers, postmen</td>
+        <td>CA, journalist, teacher, IT, communication</td>
+        <td>Poetry, sculpture, architecture, priestly work, Vedanta</td>
+      </tr>
+      <tr>
+        <td><strong>♃ Jupiter</strong></td>
+        <td>Judges, priests, bankers, ministers, preachers</td>
+        <td>Law, teaching, finance, counselling, religion</td>
+        <td>Legal, religious preaching, classical learning, service to Brahmins</td>
+      </tr>
+      <tr>
+        <td><strong>♀ Venus</strong></td>
+        <td>Dealers in gold, musicians, painters, embroiderers, jewellers</td>
+        <td>Fashion, art, cosmetics, cinema, hotel, luxury</td>
+        <td>Horses, vehicles, jewels, gold, dairy, amorous work</td>
+      </tr>
+      <tr>
+        <td><strong>♄ Saturn</strong></td>
+        <td>Shoemakers, miners, scavengers, gardeners, bricklayers</td>
+        <td>Labour, mining, real estate, construction, philosophy</td>
+        <td>Communications, transport, low sculpture, slaughter</td>
+      </tr>
+      <tr>
+        <td><strong>☊ Rahu</strong></td>
+        <td>—</td>
+        <td>Aviation, IT, diplomacy, event management, TV, space</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td><strong>☋ Ketu</strong></td>
+        <td>—</td>
+        <td>Computers, occult, foreign languages, secret service, ashram</td>
+        <td>—</td>
+      </tr>
+    </table>
+    <div class="mnemonic">
+      <div class="label">Memory Hook — Planet Order & Core Signification</div>
+      <strong>Sun = State / Gold &nbsp;|&nbsp; Moon = Sea / Nurse &nbsp;|&nbsp; Mars = Military / Surgeon &nbsp;|&nbsp; Mercury = Math / Write &nbsp;|&nbsp; Jupiter = Judge / Priest &nbsp;|&nbsp; Venus = Arts / Fashion &nbsp;|&nbsp; Saturn = Soil / Labour</strong><br><br>
+      SMMMJVS → <em>"Silly Monkeys March Merrily Just Visiting Saturn"</em>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🎓</span> K.N. Rao's Liberal / Semi-Technical / Technical Grid</div>
+    <table>
+      <tr><th>Planet</th><th>Liberal</th><th>Semi-Technical</th><th>Technical</th></tr>
+      <tr><td>☉ Sun</td><td>Pol Science</td><td>Statistical Maths</td><td>Physics, Actuary, Works</td></tr>
+      <tr><td>☽ Moon</td><td>Music, Fine Arts</td><td>Para-Medical</td><td>Chemistry, Medical</td></tr>
+      <tr><td>♂ Mars</td><td>Logic-related</td><td>Mechanic</td><td><strong>Engineer</strong></td></tr>
+      <tr><td>☿ Mercury</td><td>Accountancy</td><td>Journalism, Astrology</td><td>Higher Accountancy</td></tr>
+      <tr><td>♃ Jupiter</td><td>Vedantic, Literature</td><td>Philosophy, Psychology</td><td>Management</td></tr>
+      <tr><td>♀ Venus</td><td>Music, Dance, Painting</td><td>Hotel Mgmt, Tourism</td><td>Computer Animation, Engineering</td></tr>
+      <tr><td>♄ Saturn</td><td>Prachin Vidya, Labour Law</td><td>Mechanical work, Geology</td><td><strong>Engineering</strong></td></tr>
+      <tr><td>☊ Rahu</td><td>Research, Psycho-analytical</td><td>Pilot, Air Hostess</td><td>Space Engineer</td></tr>
+      <tr><td>☋ Ketu</td><td>Language</td><td>Language Specialist</td><td>Meteorologist, Computer</td></tr>
+    </table>
+    <div class="exam-alert">
+      <div class="label">⚠️ Exam Favourites from this Table</div>
+      • Mars/Saturn = Technical → <strong>Engineering</strong><br>
+      • Jupiter (liberal) = Vedantic/Classical knowledge → <strong>Teaching, Priest</strong><br>
+      • Rahu (technical) = <strong>Space Engineer</strong>; semi-tech = <strong>Pilot</strong><br>
+      • Ketu (technical) = <strong>Computer / Meteorologist</strong><br>
+      • Venus (semi-tech) = <strong>Hotel Management</strong>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">⭐</span> Special Planet Rules — Exam Tested</div>
+    <ul class="styled">
+      <li><strong>Drugged Moon</strong> (K.N. Rao concept) = Moon with malefic influence → indicates <strong>Doctor / Engineer / Computer</strong> professional. Moon has PAC with malefics = can deal with suffering, chemicals, poisons.</li>
+      <li><strong>Jupiter + Ketu</strong> = Technical teachers</li>
+      <li><strong>Jupiter + Venus</strong> = Solicitors, management consultants, actors, singers</li>
+      <li><strong>Jupiter + Saturn</strong> = Lawyers, judges, management consultants, philosophers</li>
+      <li><strong>Mercury + Jupiter</strong> = Teaching, preaching, banking (all the above)</li>
+      <li><strong>Mercury + Ketu</strong> = Computer professionals, original researchers</li>
+      <li><strong>Venus + Rahu</strong> = Gambling, models, TV personalities, artists</li>
+      <li><strong>Mars + Ketu</strong> = Soldiers, circus, risky jobs (trapeze, lion tamers)</li>
+      <li><strong>Sun + Rahu</strong> = Lawyers, alternative medicine</li>
+      <li><strong>Ketu</strong> = Secret missions, occultists, foreign languages, computers</li>
+      <li><strong>Rahu</strong> = Aviation, TV, radio, event management, diplomacy, drugs</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🌟</span> Which Planet Signifies What Profession?</div>
+    <div class="two-col">
+      <div>
+        <p style="color:var(--gold); margin-bottom:8px; font-weight:600;">Medical/Health Field</p>
+        <div class="tags">
+          <span class="tag planet">Jupiter</span>
+          <span class="tag planet">Ketu</span>
+          <span class="tag planet">Sun</span>
+          <span class="tag planet">Moon (drugged)</span>
+        </div>
+        <p style="margin-top:6px">All three = doctors. Jupiter = humane physician. Ketu = alternative medicine. Sun = gold/medicines.</p>
+      </div>
+      <div>
+        <p style="color:var(--gold); margin-bottom:8px; font-weight:600;">Legal Field</p>
+        <div class="tags">
+          <span class="tag planet">Jupiter</span>
+          <span class="tag planet">Saturn</span>
+          <span class="tag planet">Mercury</span>
+        </div>
+        <p style="margin-top:6px">Jupiter + Saturn interaction = primary indicator. Houses 2, 6, 9 must be linked.</p>
+      </div>
+      <div>
+        <p style="color:var(--gold); margin-bottom:8px; font-weight:600;">Engineering</p>
+        <div class="tags">
+          <span class="tag planet">Mars</span>
+          <span class="tag planet">Saturn</span>
+          <span class="tag planet">Ketu</span>
+        </div>
+        <p style="margin-top:6px">Saturn–Ketu relationship = engineering pointer. Malefics on 4H/5H = technical education.</p>
+      </div>
+      <div>
+        <p style="color:var(--gold); margin-bottom:8px; font-weight:600;">IAS / Bureaucracy</p>
+        <div class="tags">
+          <span class="tag planet">Sun</span>
+          <span class="tag planet">Jupiter</span>
+          <span class="tag planet">Saturn</span>
+        </div>
+        <p style="margin-top:6px">Sun (king) + Jupiter (advisor). Saturn brings dealings with masses. Strong 1H, 6H, 10H.</p>
+      </div>
+      <div>
+        <p style="color:var(--gold); margin-bottom:8px; font-weight:600;">CA / Finance</p>
+        <div class="tags">
+          <span class="tag planet">Mercury</span>
+          <span class="tag planet">Saturn</span>
+          <span class="tag planet">Venus</span>
+        </div>
+        <p style="margin-top:6px">Mercury (accounts) + Saturn (service). Houses 2, 6, 10 linked.</p>
+      </div>
+      <div>
+        <p style="color:var(--gold); margin-bottom:8px; font-weight:600;">Journalism / TV</p>
+        <div class="tags">
+          <span class="tag planet">Mercury</span>
+          <span class="tag planet">Rahu</span>
+          <span class="tag planet">Moon</span>
+        </div>
+        <p style="margin-top:6px">Mercury + Rahu = media, communication, TV. Moon = face/appearance on screen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOUSES & SIGNS ===== -->
+<section id="houses">
+  <h2 class="section-heading">Houses, Signs & Tatwas</h2>
+  <p class="section-intro">The architecture of profession — what each house and sign contributes. Heavily tested in multiple-choice questions.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🏠</span> The Key Houses for Profession</div>
+    <table>
+      <tr><th>House</th><th>Signification</th><th>For Profession</th></tr>
+      <tr><td><strong>1st (Lagna)</strong></td><td>Self, body, overall chart strength</td><td>Native's overall capacity; strong LL = success</td></tr>
+      <tr><td><strong>2nd</strong></td><td>Wealth, speech, home education (Sanskara)</td><td>Source of income; early/home education</td></tr>
+      <tr><td><strong>3rd</strong></td><td>Effort, parakram, siblings</td><td>Self-employment pointer; writing career; transfers</td></tr>
+      <tr><td><strong>4th</strong></td><td>Early education, mother, happiness</td><td>School-level education; roots of career</td></tr>
+      <tr><td><strong>5th</strong></td><td>Education (primary), intellect, children</td><td>55–60% of education; inclinations; college choice</td></tr>
+      <tr><td><strong>6th</strong></td><td>Service, enemies, disease, competition</td><td>Service indicator; stronger 6L than LL = service</td></tr>
+      <tr><td><strong>8th</strong></td><td>Longevity, transformation, hidden</td><td>Trik house; professional distress if connected to 10H</td></tr>
+      <tr><td><strong>9th</strong></td><td>Luck, dharma, father, higher learning</td><td>Fame, achievement; legal profession (9L = Jupiter)</td></tr>
+      <tr><td><strong>10th (Karma)</strong></td><td>Profession, career, authority</td><td>Primary house of profession</td></tr>
+      <tr><td><strong>11th</strong></td><td>Gains, friends, elder siblings</td><td>Income, recognition; 10L in 11H = immense riches</td></tr>
+      <tr><td><strong>12th</strong></td><td>Foreign, expenses, moksha, hospitals</td><td>Work abroad; 10L in 12H = difficult career, foreign posting</td></tr>
+    </table>
+    <div class="mnemonic">
+      <div class="label">The Education Triangle</div>
+      2H = Home/early learning (15%) → 4H = School (25%) → <strong>5H = College/choices (60%)</strong>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">♈</span> Signs in the 10th House (Saravali Readings)</div>
+    <div class="shortcut">
+      <div class="label">Key Sign Readings for 10H — Exam Tested</div>
+      <strong>Aries 10H</strong>: CID officer, happy in work, king appreciates but public may censure<br>
+      <strong>Scorpio 10H</strong>: Brutal work, criminal, injury to Brahmins/Guru — "engaged in bad works"<br>
+      <strong>Pisces 10H</strong>: Loved by all, steady, pleasing God/Brahmins<br>
+      <strong>Libra 10H</strong>: Righteous, legally correct, trading in many articles<br>
+      <strong>Leo 10H</strong>: Fierce, cruel works, shifting from place to place
+    </div>
+    <table>
+      <tr><th>Navamsha 10H Sign</th><th>Likely Profession</th></tr>
+      <tr><td>Aries</td><td>Gardener, nurse, agriculturist, chemist, trader, diplomat</td></tr>
+      <tr><td>Gemini</td><td>Writing, accountancy, pearls/conch trade, ships</td></tr>
+      <tr><td>Cancer</td><td>Carpentry, engineering, hunting, pearls, chemicals, foreign travel</td></tr>
+      <tr><td>Libra</td><td>Astrologer, alchemist, counterfeiting coins, trader, milk products</td></tr>
+      <tr><td>Aquarius</td><td>Arms manufacture, thieving, serving women, carrying burdens</td></tr>
+      <tr><td>Libra (10L navamsha)</td><td>→ Legal / classical learning / teaching</td></tr>
+      <tr><td>Aquarius (10L navamsha)</td><td>→ Communications / service / low-quality sculpture</td></tr>
+    </table>
+    <div class="exam-alert">
+      <div class="label">⚠️ Frequently Tested Q: If 10 lord Navamsha rashi is Libra → profession is…</div>
+      Answer: <strong>Legal, classical and religious learning, teaching</strong>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🔥</span> Signs & Tatwas — Profession Tendencies</div>
+    <div class="two-col">
+      <div>
+        <p><strong style="color:var(--gold)">Moveable Signs (Char)</strong><br>Career: Sales, marketing, management, travel. Mobile, ambitious, ambitious, adaptable. 5+ planets = self-employed.</p>
+        <p><strong style="color:var(--gold)">Fixed Signs (Sthir)</strong><br>Career: Research, stable positions. Learned, wealthy, liked by rulers. Ideal for research.</p>
+        <p><strong style="color:var(--gold)">Dual Signs (Dwiswabha)</strong><br>Career: Intellectuals, fluctuating wealth. Clever but prone to missed opportunities.</p>
+      </div>
+      <div>
+        <p><strong style="color:var(--gold)">Agni Tatwa (Fire: Aries, Leo, Sag)</strong><br>Automobile engineers, surgeons, steel/iron, railways, politicians, engineers</p>
+        <p><strong style="color:var(--gold)">Bhu Tatwa (Earth: Taurus, Virgo, Cap)</strong><br>Civil service, property, agriculture, construction, mining</p>
+        <p><strong style="color:var(--gold)">Vayu Tatwa (Air: Gemini, Libra, Aqu)</strong><br>Philosophers, writers, scientists, pilots, lawyers, astrologers</p>
+        <p><strong style="color:var(--gold)">Jal Tatwa (Water: Cancer, Scorpio, Pisces)</strong><br>Dairy, chemicals, shipping, marine, oil, fishing, <strong>teachers</strong></p>
+      </div>
+    </div>
+    <div class="exam-alert">
+      <div class="label">⚠️ Exam Q: Influence of Vayu Tatwa rashi on 10H = ?</div>
+      Answer: <strong>Pilots, philosophers, writers</strong> (all of the above)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">📍</span> 10th Lord in Each House — B.V. Raman's Analysis</div>
+    <table>
+      <tr><th>10L in House</th><th>Career Outcome</th></tr>
+      <tr><td>1st (Lagna)</td><td>Self-employed; independent profession; rises by own effort</td></tr>
+      <tr><td>2nd</td><td>Fortunate; family business; catering/restaurant business</td></tr>
+      <tr><td>3rd</td><td>Constant travel; writer/speaker; brother helps career</td></tr>
+      <tr><td>4th</td><td>Learned, famous, agricultural/political work</td></tr>
+      <tr><td>5th</td><td>Broker, speculation, simple life, orphanage head</td></tr>
+      <tr><td>6th</td><td>Judiciary, prisons, hospitals; low-paying job if Saturn aspects</td></tr>
+      <tr><td>7th</td><td>Diplomatic missions; partnership business; travel abroad</td></tr>
+      <tr><td>8th</td><td>Many career breaks; Jupiter PAC → mystic/spiritual teacher</td></tr>
+      <tr><td>9th</td><td>Spiritual stalwart; hereditary work; charitable</td></tr>
+      <tr><td>10th</td><td>Highly successful; commands respect; 3+ planets → ascetic</td></tr>
+      <tr><td>11th</td><td><strong>Immense riches</strong>; employs hundreds; meritorious work</td></tr>
+      <tr><td>12th</td><td>Work in far-off place; lack of comforts; spiritual if benefic</td></tr>
+    </table>
+    <div class="mnemonic">
+      <div class="label">Remember the Extremes</div>
+      10L in <strong>11H</strong> = BEST = Immense riches, employs hundreds<br>
+      10L in <strong>12H</strong> = WORST = Far from family, difficulties, foreign postings
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🏛️</span> Houses for Professional Distress</div>
+    <p>Professional distress comes from interaction of L/LL, 10H/L, and AmK with the <strong>Trik houses</strong> (6, 8, 12) and their lords.</p>
+    <div class="shortcut">
+      <div class="label">Distress Triggers to Memorise</div>
+      • Dasha/AD/PD of planets that are <strong>combust, retrograde, in planetary war, or in Mrityu Bhaga</strong><br>
+      • <strong>Dasha Chidra</strong> (end/beginning of MDs) = crisis trigger<br>
+      • Transit of dasha planets in 5, 6, 8, 12H or over retrograde/combust planets<br>
+      • Saturn/Venus or Rahu/Venus periods = <strong>special caution</strong> (K.N. Rao teaching)
+    </div>
+  </div>
+</section>
+
+<!-- ===== SPECIFIC PROFESSIONS ===== -->
+<section id="specific">
+  <h2 class="section-heading">Specific Profession Indicators</h2>
+  <p class="section-intro">Each profession has a signature combination. Learn the 4–5 key principles for each — these directly appear as exam questions.</p>
+
+  <div class="profession-grid">
+    <div class="prof-card">
+      <h3>🩺 Doctors</h3>
+      <ul>
+        <li><strong>5H/L ↔ 10H/L ↔ 6H/L ↔ 12H/L</strong> — PAC links across all four</li>
+        <li>Jupiter influences L, 5H, 10H — permits healing</li>
+        <li>"<strong>Drugged Moon</strong>" — Moon with malefic(s); Moon has malefic in 8H from itself</li>
+        <li>Luminaries (Sun + Moon) afflicted by Trik lords</li>
+        <li>Malefic on 4H/5H/L = technical medical education</li>
+      </ul>
+      <div class="key-combo">KEY PLANETS: Jupiter (humane) + Ketu + Sun | All three = doctor</div>
+    </div>
+
+    <div class="prof-card">
+      <h3>⚖️ Lawyers</h3>
+      <ul>
+        <li><strong>Houses 2 + 6 + 9</strong> must be linked (2L, 6L, 9L interconnected)</li>
+        <li>Jupiter + Saturn interaction = primary indicator</li>
+        <li>AmK planet interacts with 2H, 6H, 9H and their lords</li>
+        <li>Mars + Rahu = criminal law; Mercury = corporate law; Saturn/Ketu = taxation</li>
+        <li>Appropriate dasha at right age (typically Rahu or Jupiter dasha)</li>
+      </ul>
+      <div class="key-combo">SHORTCUT: Jup + Sat mutual influence + 2/6/9 house link = Lawyer</div>
+    </div>
+
+    <div class="prof-card">
+      <h3>⚙️ Engineers</h3>
+      <ul>
+        <li>Malefics (Sun, Saturn, Mars, Rahu, Ketu) PAC with <strong>4H/L or 5H/L</strong></li>
+        <li>Saturn + Ketu relationship = engineering pointer</li>
+        <li>5H/L connects with 10H/L</li>
+        <li>NO predominant Jupiterian influence (unlike doctors)</li>
+        <li>Dasha: 10H/L or constellation lord of 10L at career start</li>
+      </ul>
+      <div class="key-combo">KEY DIFF FROM DOCTOR: Engineers = malefics on 4/5H; Doctors = Jupiter on 5/10H</div>
+    </div>
+
+    <div class="prof-card">
+      <h3>🏛️ IAS/Bureaucrats</h3>
+      <ul>
+        <li><strong>1H + 6H + 10H</strong> — strong PAC interaction of all three</li>
+        <li>3rd house adds: dedication, sustained hard work</li>
+        <li>Sun (king) + Jupiter (advisor) = primary planets</li>
+        <li>Saturn = dealings with masses/public</li>
+        <li>AmK strong (exalted/own/Vargottama) in Kendra or 3H/11H</li>
+      </ul>
+      <div class="key-combo">FORMULA: Sun + Jupiter + strong L/6H/10H PAC = IAS/Bureaucrat</div>
+    </div>
+
+    <div class="prof-card">
+      <h3>📊 Chartered Accountants</h3>
+      <ul>
+        <li><strong>2H + 6H + 10H</strong> — key houses (wealth + service + karma)</li>
+        <li>Mercury + Saturn = primary planets (accounting + service)</li>
+        <li>Venus aspects also important</li>
+        <li>If 2H/6H/9H and Saturn connected → Judiciary/Lawyers/CA overlap</li>
+        <li>Saturn = "Planet for Auditors" in many texts</li>
+      </ul>
+      <div class="key-combo">PLANET: Mercury (accounts) + Saturn (service discipline) → CA</div>
+    </div>
+
+    <div class="prof-card">
+      <h3>📰 Journalists</h3>
+      <ul>
+        <li>Mercury + Mars = investigative reporter/editor</li>
+        <li>Mercury + Rahu = media, event management</li>
+        <li>Moon = face/public communication</li>
+        <li>Mars + Mercury + Jupiter in Gemini = feature writing, news reporting, editing</li>
+        <li>Connection of 3H (communication) with 10H</li>
+      </ul>
+      <div class="key-combo">PLANET: Mercury (writing) + Mars (investigation) + Rahu (media) = Journalist</div>
+    </div>
+
+    <div class="prof-card">
+      <h3>📺 Television Persons</h3>
+      <ul>
+        <li>Rahu = TV, radio, wireless, electricity, air hostess</li>
+        <li>Moon = public face, appearance</li>
+        <li>Venus + Rahu = models, TV personalities, glamour</li>
+        <li>Mercury = communication on air</li>
+        <li>Strong 3H/10H connection + Rahu influence</li>
+      </ul>
+      <div class="key-combo">RAHU = TV/radio/wireless — primary significator of television profession</div>
+    </div>
+
+    <div class="prof-card">
+      <h3>👗 Fashion Technologists</h3>
+      <ul>
+        <li>Venus = fashion, clothes, luxury, beauty</li>
+        <li>Connection of <strong>3H + 9H + 12H with Venus</strong> = fashion/export/foreign work</li>
+        <li>Mercury + Venus = interior decorators, stylists, librarians</li>
+        <li>Mars + Venus = boutique, beauty parlor, dairy</li>
+        <li>Saturn + Venus = woodcraft, chemical, agriculture, dress designers</li>
+      </ul>
+      <div class="key-combo">3H + 9H + 12H + Venus = Fashion Designing / Export</div>
+    </div>
+
+    <div class="prof-card">
+      <h3>🏨 Hotel Management</h3>
+      <ul>
+        <li>Moon = catering, eating places, confectioners, dairy</li>
+        <li>Venus = luxury, hospitality, tourism</li>
+        <li>Cancer sign + Moon/Venus/Mars = hotel, snack bar, bakery</li>
+        <li>K.N. Rao: Venus (semi-tech) = Hotel Management, Tourism</li>
+        <li>Jupiter + Venus in 4H from Karakamsha = palatial house with woodwork</li>
+      </ul>
+      <div class="key-combo">Moon + Venus + Cancer sign = Hotel/Hospitality profession</div>
+    </div>
+
+    <div class="prof-card">
+      <h3>💻 Computer Professionals</h3>
+      <ul>
+        <li>Ketu = computers, engineers (primary)</li>
+        <li>Mercury + Ketu = computer professionals, original researchers</li>
+        <li>Rahu = IT, event management, internet, tech disruption</li>
+        <li>Venus (technical) = computer animation, graphics</li>
+        <li>Saturn = engineering; combined with Ketu = software/tech</li>
+      </ul>
+      <div class="key-combo">Mercury + Ketu = Computer Professional | Rahu = broader IT/internet</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🎯</span> Varahmihir's Navamsha Lord Professions (Hardeo Sharma)</div>
+    <p>When the Navamsha lord of the 10th lord (natal chart) is:</p>
+    <table>
+      <tr><th>Navamsha Key Planet</th><th>Profession</th></tr>
+      <tr><td>☉ Sun</td><td>Sale/purchase of grass, water, wool, medicines, grains, juices, gold, jeweller, sports, holy work, initiation of mantras</td></tr>
+      <tr><td>☽ Moon</td><td>Royalty, women, clothes, water products, entertainment, farming, agriculture</td></tr>
+      <tr><td>♂ Mars</td><td>War/fight, metals, contractors, gambling, thieving</td></tr>
+      <tr><td>☿ Mercury</td><td>Poetry, priestly work, classical learning, Vedanta, sculptor, architecture</td></tr>
+      <tr><td>♃ Jupiter</td><td>Legal, religious preaching, classical and religious learning, teaching, service to Brahmins</td></tr>
+      <tr><td>♀ Venus</td><td>Horses, vehicles, jewels, gold, dairy, amorous occupation</td></tr>
+      <tr><td>♄ Saturn</td><td>Communications, transport, low quality sculpture, slaughter, carrying loads, wood</td></tr>
+    </table>
+    <div class="exam-alert">
+      <div class="label">⚠️ Most-Tested Q: Native earns by scented articles, gold, wool, medicines. Navamsha lord of 10L is…</div>
+      Answer: <strong>Sun</strong> (Hardeo Sharma's system)
+    </div>
+    <div class="exam-alert">
+      <div class="label">⚠️ Most-Tested Q: Native is a contractor. Navamsha lord of 10L is…</div>
+      Answer: <strong>Mars</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRINCIPLES ===== -->
+<section id="principles">
+  <h2 class="section-heading">Universal Principles</h2>
+  <p class="section-intro">Core rules that apply across all horoscope analyses for profession — memorise these perfectly.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">⚡</span> The AmK Analysis System</div>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        How to identify the AmK planet <span class="chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        The planet with the <strong>2nd highest longitude</strong> (ignoring signs) = AmK. The AK has the highest longitude. Example: if planets are at 14°30', 12°30', 16°15', 29°40', 1°47'... AK = 29°40' planet; AmK = 16°15' planet.
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        AmK placement results <span class="chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        • AmK in Kendra or 3H/11H from lagna = high-profile career<br>
+        • AmK in Kendra or 3H/11H from AK in Navamsha = smooth, rewarding career<br>
+        • AmK aspected by malefics + ill-placed = <strong>fall in career / distress</strong><br>
+        • AmK + MK in 10H = official travelling<br>
+        • 8P + 5P + AMK in 10H = change of profile with promotion
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        First Salary timing <span class="chevron">▼</span>
+      </div>
+      <div class="accordion-body">
+        AmK in transit should either: (a) influence the MD/AD lords, or (b) be in the 10th or 11th sign from MD/AD. This combination = time of first salary / job commencement.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">📈</span> Rise in Profession — Key Indicators</div>
+    <ul class="styled">
+      <li>Dashas of: <strong>LL, 10L, exalted planets, and AmK planet</strong> = favourable for professional rise</li>
+      <li>Planets associated with or aspected by AmK also produce favourable results</li>
+      <li>Jaimini Raja Yoga (AK + AmK + PK + DK + 5L interaction) = strength of career yoga</li>
+      <li>Yoga gives results as per its <strong>strength in Navamsha</strong></li>
+      <li>The Dashamsha is the "road map" — LL and 10L in Dashamsha are most critical</li>
+    </ul>
+    <div class="shortcut">
+      <div class="label">The Triple Check Rule</div>
+      For <strong>any</strong> career event: Check it in (1) Natal chart → (2) Navamsha → (3) Dashamsha.<br>
+      If all three confirm = certain. If only natal = uncertain.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🎓</span> Education Principles</div>
+    <ul class="styled">
+      <li>The two primary education planets: <strong>Jupiter and Mercury</strong> — placement in Kendra or Trine = good education</li>
+      <li><strong>Saraswati Yoga</strong>: Jupiter, Venus, Mercury in houses 1/2/4/5/7/9/10 (jointly or singly)</li>
+      <li><strong>Budh-Aditya Yoga</strong>: Sun + Mercury combination = excellent teacher/speaker/mathematician</li>
+      <li><strong>Shankha Yoga</strong>: 5L and 6L in mutual Kendra + strong Lagna = educational competitiveness</li>
+      <li>D-24 (Chaturvimshamsha) = divisional chart for education; use only with reliable birth time</li>
+      <li>For competitive exams: Dasha of LL + AD of 5L + PD of 10L at 12th class final = gets desired result</li>
+    </ul>
+    <div class="exam-alert">
+      <div class="label">⚠️ Exam: Jupiter in 2H or 5H in Mercury/Venus sign, connecting with Merc/Venus → gives…</div>
+      Answer: <strong>Proficiency in art including music</strong>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🔮</span> Dashamsha (D-10) Analysis Rules</div>
+    <ul class="styled">
+      <li>Dashamsha = the "road map" of profession — its ups, downs, shades and verities</li>
+      <li>LL and 10L together in D-10 lagna = <strong>thorough professional</strong></li>
+      <li>6H and 12H of D-10 empty = friction-free service, no early retirement</li>
+      <li>In D-10: examine Dhana Yoga (2/5/9/11 house lords interaction) for income level</li>
+      <li>Two vacant signs in D-10 (not counted in Dashamsha) hold the "Karmic key" to profession</li>
+      <li>Strong D-10 with 10L in good position = definitive confirmation of profession promise</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">⚖️</span> Strength Assessment Rules</div>
+    <ul class="styled">
+      <li>Strong rashi = rashi supported by its own lord (by placement or aspect) + benefics in or aspecting it</li>
+      <li>Neecha Bhanga Raja Yoga: debilitated planet's exaltation sign lord in Kendra from Moon or Lagna lord in Kendra from Lagna = cancellation + Raj yoga</li>
+      <li>Vargottama = planet in same sign in natal and Navamsha = strengthened; Lagna Vargottama = very strong</li>
+      <li>Benefics on either side of a sign (Shubha Kartari) = gain strength</li>
+      <li>For service vs. business: concentration of planets around 10H (10H to 3H) = strengthens 10H</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== TWO-PLANET YOGAS ===== -->
+<section id="yogas">
+  <h2 class="section-heading">Two-Planet Profession Yogas</h2>
+  <p class="section-intro">The complete list from Col. Gour — frequently tested in MCQ format. Use these as shortcuts.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🌟</span> Sun Combinations</div>
+    <table>
+      <tr><th>Yoga</th><th>Professions Indicated</th></tr>
+      <tr><td>Sun + Moon</td><td>Politicians, psychologists, historians; works on instruments</td></tr>
+      <tr><td>Sun + Mars</td><td>Diplomats, uniformed services, govt jobs, factories, industrialists, timber merchants</td></tr>
+      <tr><td>Sun + Mercury</td><td>"Budh-Aditya" = eloquent teachers, preachers, diplomats, mathematicians, columnists</td></tr>
+      <tr><td>Sun + Jupiter</td><td>Preachers, temple/ashram workers, respected by king, does work of others</td></tr>
+      <tr><td>Sun + Venus</td><td>Theatrical arts, weaponry; earns working with or for women</td></tr>
+      <tr><td>Sun + Saturn</td><td>Iron works, metallurgy, wineries, utensils</td></tr>
+      <tr><td>Sun + Rahu</td><td>Lawyers, alternative medicine</td></tr>
+      <tr><td>Sun + Ketu</td><td>Spies (govt/industrial), occultists, religious workers, confidence tricksters</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🌙</span> Moon Combinations</div>
+    <table>
+      <tr><th>Yoga</th><th>Professions Indicated</th></tr>
+      <tr><td>Moon + Mars</td><td>Chemicals/chemists, writers, engineers, war chroniclers, ceramics, leather</td></tr>
+      <tr><td>Moon + Mercury</td><td>Poets, wine traders, shippers; very intelligent, rich and happy</td></tr>
+      <tr><td>Moon + Jupiter</td><td>Priests, religion jobs, advertising, media, organizers, financiers, social workers, teachers</td></tr>
+      <tr><td>Moon + Saturn</td><td>Teachers, archaeologists, horse/elephant breeders, ashram/religious sect members</td></tr>
+      <tr><td>Moon + Rahu</td><td>Ultra-sensitive, psychologists, pathologists</td></tr>
+      <tr><td>Moon + Ketu</td><td>Psychiatrists, psychics</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">♂</span> Mars Combinations</div>
+    <table>
+      <tr><th>Yoga</th><th>Professions Indicated</th></tr>
+      <tr><td>Mars + Mercury</td><td>Buyers/sellers of iron+gold, explorers, travel writers, journalists, investigative reporters, engine drivers, zoo workers</td></tr>
+      <tr><td>Mars + Jupiter</td><td>Courageous authors, vastu experts, lawyers, public trusts, orphanages</td></tr>
+      <tr><td>Mars + Venus</td><td>Dairy, cosmetics, artificial jewellery, boutiques, beauty parlor, fashion organizers</td></tr>
+      <tr><td>Mars + Saturn</td><td>Secret sects, trade unionists, dealers in liquors and poisons, tobacco</td></tr>
+      <tr><td>Mars + Rahu</td><td>Traveller, explorer, secret religious sects</td></tr>
+      <tr><td>Mars + Ketu</td><td>Soldiers, dancing, circus, risky jobs (trapeze, lion tamers), explorers</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">☿</span> Mercury, Jupiter & Venus Combinations</div>
+    <table>
+      <tr><th>Yoga</th><th>Professions Indicated</th></tr>
+      <tr><td>Mercury + Jupiter</td><td>Communicators, historians, biographers, essayists, editors, statisticians, bookkeeping, banking, religious reformers, judges</td></tr>
+      <tr><td>Mercury + Venus</td><td>Poets, sales girls, librarians, interior decorators, feng shui, furniture/decor, photo journalists, make-up artists</td></tr>
+      <tr><td>Mercury + Rahu</td><td>Inventors, mechanics, event managers, typists, curators, bookkeepers; management experts, life coaches</td></tr>
+      <tr><td>Mercury + Ketu</td><td>Computer professionals, thinkers, original researchers</td></tr>
+      <tr><td>Jupiter + Venus</td><td>Solicitors, management consultants, actors, painters, singers; living by knowledge; Vedantic scholars</td></tr>
+      <tr><td>Jupiter + Saturn</td><td>Lawyers, judges, management consultants, philosophers</td></tr>
+      <tr><td>Jupiter + Rahu</td><td>"Guru Chandal" — managers, agencies, politicians</td></tr>
+      <tr><td>Jupiter + Ketu</td><td>Technical teachers</td></tr>
+      <tr><td>Saturn + Venus</td><td>Wood craft, chemical works, breeders, agriculture, mining, horticulture, dress designers</td></tr>
+      <tr><td>Venus + Rahu</td><td>Gambling, casinos, artists, sculptors, models, TV personalities, cabaret dancers</td></tr>
+      <tr><td>Venus + Ketu</td><td>Time instruments, computers, artificial jewellery</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">💡</span> Quick Pattern Recognition</div>
+    <div class="mnemonic">
+      <div class="label">Exam Shortcuts for Two-Planet Yogas</div>
+      <strong>Any combo with Rahu</strong> = modern/tech/unconventional profession<br>
+      <strong>Any combo with Ketu</strong> = technical/occult/research/computers<br>
+      <strong>Saturn + any</strong> = service, hard work, laborious profession<br>
+      <strong>Mercury + any</strong> = communication, writing, accounting<br>
+      <strong>Jupiter + Mercury</strong> = Teaching + Banking (classic MCQ answer: "all the above")<br>
+      <strong>Venus + any benefic</strong> = arts, luxury, beauty<br>
+      <strong>Mars + Mercury</strong> = journalism + iron/gold trading (investigative)
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUIZ ===== -->
+<section id="quiz">
+  <h2 class="section-heading">Practice Questions</h2>
+  <p class="section-intro">Based on actual Acharya Mid-term exam patterns (2022–2025). Click a question to reveal options, then click an option to check.</p>
+
+  <div id="quiz-score">Score: 0 / 0</div>
+  <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+
+  <div id="quiz-container"></div>
+
+  <button onclick="resetQuiz()" style="background:rgba(201,168,76,0.15); border:1px solid var(--gold); color:var(--gold); padding:10px 20px; border-radius:6px; cursor:pointer; font-family:'Space Mono',monospace; font-size:11px; letter-spacing:1px; margin-top:10px;">RESET QUIZ</button>
+</section>
+
+<!-- ===== MNEMONICS ===== -->
+<section id="mnemonics">
+  <h2 class="section-heading">Quick Reference & Mnemonics</h2>
+  <p class="section-intro">All shortcuts in one place. Study this page 24 hours before the exam.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🧠</span> Master Mnemonics List</div>
+    <div class="mnemonic">
+      <div class="label">1. Planet–Income Source (Varahmihir)</div>
+      <strong>"Fat Moms Fight Fiercely, Brothers Watch Silently"</strong><br>
+      Sun(Father) Moon(Mother) Mars(Foe) Mercury(Friend) Jupiter(Brother) Venus(Wife) Saturn(Servants)
+    </div>
+    <div class="mnemonic">
+      <div class="label">2. Education House Percentages</div>
+      <strong>2-4-5 = "Tiny Giant Massive"</strong> → 2H=15%, 4H=25%, <strong>5H=60%</strong>
+    </div>
+    <div class="mnemonic">
+      <div class="label">3. The 4 Exam Pillars</div>
+      <strong>"Happy People Don't Yield"</strong> = Houses → Planets → Divisional → Yoga+Dasha
+    </div>
+    <div class="mnemonic">
+      <div class="label">4. Key Planet Keywords (K.N. Rao)</div>
+      <strong>Sun=State | Moon=Sea/Nurse | Mars=Military/Surgery | Mercury=Math/Write | Jupiter=Judge/Priest | Venus=Arts/Fashion | Saturn=Soil/Labour | Rahu=Sky/Tech | Ketu=Computer/Occult</strong>
+    </div>
+    <div class="mnemonic">
+      <div class="label">5. Service vs Self-Employment</div>
+      <strong>Saturn PAC with 10H/L = SERVICE</strong><br>
+      <strong>5+ planets in 7H–12H = Self-employed</strong><br>
+      <strong>6L stronger than LL = SERVICE</strong>
+    </div>
+    <div class="mnemonic">
+      <div class="label">6. Tatwas Quick</div>
+      <strong>Fire=Surgeon/Engineer | Earth=Civil Service | Air=Pilot/Lawyer/Writer | Water=Teacher/Dairy/Marine</strong>
+    </div>
+    <div class="mnemonic">
+      <div class="label">7. Doctor's Signature</div>
+      <strong>5+10+6+12 all linked + Jupiter on 5/10 + Drugged Moon</strong><br>
+      "Sick Moon Helps Jupiter" = drugged Moon + Jupiter in key positions = Doctor
+    </div>
+    <div class="mnemonic">
+      <div class="label">8. Lawyer's Signature</div>
+      <strong>2+6+9 linked + Jupiter ↔ Saturn interaction</strong><br>
+      "Two Sixers Nailing Juicy Sixes" = 2H 6H 9H linked, Jupiter+Saturn
+    </div>
+    <div class="mnemonic">
+      <div class="label">9. Engineer's Signature</div>
+      <strong>Malefics on 4H+5H + Saturn-Ketu relation + 5L-10L link</strong><br>
+      NO dominant Jupiter (unlike doctor). "Mars Saturn Kill 4/5 = Engineer"
+    </div>
+    <div class="mnemonic">
+      <div class="label">10. IAS/Bureaucrat Signature</div>
+      <strong>1H + 6H + 10H PAC + Sun + Jupiter + Strong AmK</strong><br>
+      "One Six Ten with Sun Jupiter" = IAS
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">📋</span> Critical Exam Facts (True/False Category)</div>
+    <table>
+      <tr><th>Statement</th><th>Answer</th></tr>
+      <tr><td>AmK strength and placement = indicator of work profile</td><td><strong>TRUE</strong></td></tr>
+      <tr><td>AmK aspected/conjunct with Dara Karaka = rise in life</td><td><strong>TRUE</strong></td></tr>
+      <tr><td>3rd lord in 10H = native will be self-made person</td><td><strong>TRUE</strong></td></tr>
+      <tr><td>If 6th lord stronger than LL → person goes for service</td><td><strong>TRUE</strong></td></tr>
+      <tr><td>Connection of 3,9,12 with Venus = fashion designing</td><td><strong>TRUE (export / fashion)</strong></td></tr>
+      <tr><td>Jupiter + Mercury conjunction gives teaching, preaching, banking</td><td><strong>TRUE (all the above)</strong></td></tr>
+      <tr><td>If more planets in fixed rashis → native is stable, learned, wealthy</td><td><strong>TRUE (all the above)</strong></td></tr>
+      <tr><td>Lagna Lord and 10th lord conjunct in Lagna or 10H → native is famous</td><td><strong>TRUE</strong></td></tr>
+      <tr><td>Influence of Watery/Jal Tatwa rashi on 10H = pilots</td><td><strong>FALSE</strong> (pilots = Vayu Tatwa)</td></tr>
+      <tr><td>Influence of Vayu Tatwa on 10H = pilots, philosophers, writers</td><td><strong>TRUE (all the above)</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🔑</span> Frequently Tested "Which Planet" Questions</div>
+    <table>
+      <tr><th>Profession</th><th>Answer Planet(s)</th></tr>
+      <tr><td>Post & Telegraph Dept</td><td><strong>Mercury</strong></td></tr>
+      <tr><td>Medical profession</td><td><strong>Jupiter + Ketu + Sun</strong> (all the above)</td></tr>
+      <tr><td>Nursing profession</td><td><strong>Moon</strong></td></tr>
+      <tr><td>Auditors</td><td><strong>Mercury</strong> (also Saturn)</td></tr>
+      <tr><td>Fashion designing / export</td><td>Connection of <strong>3H, 9H, 12H + Venus</strong></td></tr>
+      <tr><td>Scientific organisation</td><td><strong>Jupiter</strong></td></tr>
+      <tr><td>Computer professionals</td><td><strong>Mercury + Ketu</strong></td></tr>
+      <tr><td>Secret missions</td><td><strong>Ketu</strong></td></tr>
+      <tr><td>TV/media</td><td><strong>Rahu</strong></td></tr>
+      <tr><td>Jeweller/Goldsmith — 10th lord is…</td><td><strong>Venus</strong> (Navamsha of 10L)</td></tr>
+      <tr><td>If native earns by scented articles, gold, wool, medicines — NavamshKey planet is</td><td><strong>Sun</strong></td></tr>
+      <tr><td>Native is contractor — NavamshKey planet is</td><td><strong>Mars</strong></td></tr>
+      <tr><td>Drugged Moon = combination of</td><td><strong>Doctor + Engineer + Computer</strong> (all the above)</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">🏆</span> The "All of the Above" Answers</div>
+    <p>These exam questions almost always have "all of the above" as the correct answer — recognise the pattern:</p>
+    <ul class="styled">
+      <li>If Lagna lord and 10th lord conjunct in Lagna or 10H, the person will be → Learned + Famous + Build institution = <strong>All the above</strong></li>
+      <li>Sun signifies → Big name + prestige + health and vitality = <strong>All the above</strong></li>
+      <li>If more planets in fixed rashis, native will be → Learned + Wealthy + Stable nature = <strong>All the above</strong></li>
+      <li>Jupiter + Mercury conjunction = Teaching + Preaching + Banking = <strong>All the above</strong></li>
+      <li>Medical profession planets = Jupiter + Ketu + Sun = <strong>All the above</strong></li>
+      <li>Drugged Moon = Doctor + Engineer + Computer = <strong>All the above</strong></li>
+      <li>Vayu Tatwa on 10H = Pilots + Philosophers + Writers = <strong>All the above</strong></li>
+      <li>Moon/Mars conjunction in 4H = Defective limb + Problem in progeny + Devoid of wealth = <strong>All the above</strong></li>
+      <li>Result of Sun/Venus conjunction in 7H = Insulted by women + Devoid of wealth + Wanders in hills = <strong>All the above</strong></li>
+      <li>3rd lord in 4H = Rise in life + Artistic work + Transfer in service = <strong>All the above</strong></li>
+    </ul>
+    <div class="mnemonic">
+      <div class="label">Pattern: When 3 positive/related results are given together</div>
+      <strong>If the question lists 3 results from the same planet/house combination that all naturally follow = "All the above" is correct</strong>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="emoji">📅</span> Last-Minute Revision Sequence</div>
+    <ol style="color:var(--warm); padding-left:20px; font-size:13px; line-height:2;">
+      <li>Varahmihir's planet → income source table (Father/Mother/Foe…)</li>
+      <li>Varahmihir's planet → profession table (Sun=Govt/Gold, Moon=Sailor/Nurse…)</li>
+      <li>Hardeo Sharma's Navamsha Key planet professions (Sun=medicines/gold, Mars=contractor…)</li>
+      <li>K.N. Rao's Liberal/Semi-Technical/Technical grid</li>
+      <li>Service vs Self-Employment: 7 Principles (Saturn+10H = service; 6L>LL = service)</li>
+      <li>Doctor principles (5+10+6+12 + Jupiter + Drugged Moon)</li>
+      <li>Lawyer principles (2+6+9 + Jupiter+Saturn)</li>
+      <li>Engineer principles (Malefics on 4/5H + Saturn-Ketu)</li>
+      <li>IAS principles (1+6+10 + Sun+Jupiter + strong AmK)</li>
+      <li>Two-planet yogas (especially: Merc+Jupiter=Teaching/Banking; Venus+Rahu=TV/Models; Merc+Ketu=Computers)</li>
+      <li>AmK identification method + career implications</li>
+      <li>"All the above" pattern recognition</li>
+    </ol>
+  </div>
+
+  <div class="footer-note">
+    Study Guide based on Col. A.K. Gour — Astrology of Professions (Vani Publications) &<br>
+    BVB / K.N. Rao Institute Acharya Mid-term Papers 2022–2025
+  </div>
+</section>
+
+</main>
+
+<script>
+// Tab navigation
+function showTab(id) {
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+// Accordion
+function toggleAccordion(header) {
+  header.classList.toggle('open');
+  const body = header.nextElementSibling;
+  body.classList.toggle('show');
+}
+
+// Quiz data
+const questions = [
+  {q:"According to Varahmihir, if Moon occupies the 10th house, the source of income will be:", opts:["Father","Mother","A foe","A friend"], ans:1},
+  {q:"Which planet signifies medical profession?", opts:["Jupiter","Ketu","Sun","All the above"], ans:3},
+  {q:"The strength and placement of AmK is an indicator of work profile of a native.", opts:["True","False"], ans:0},
+  {q:"Jupiter and Mercury conjunction generally gives rise to which profession?", opts:["Teaching","Preaching","Banking","All the above"], ans:3},
+  {q:"If some native makes money by scented articles, gold, wool and medicines, his Navamsha lord of 10th lord will be:", opts:["Saturn","Sun","Mars","None"], ans:1},
+  {q:"Which planet signifies Post & Telegraph department?", opts:["Mercury","Venus","Moon","Sun"], ans:0},
+  {q:"If Lagna Lord and 10th lord are conjunct in Lagna or 10th house, then person will be:", opts:["Learned","Famous","Build new institution","All the above"], ans:3},
+  {q:"If more planets are in fixed rashis, then native will be:", opts:["Learned","Wealthy","Stable nature","All the above"], ans:3},
+  {q:"3rd lord in 4th house is a combination of:", opts:["Rise in life","Artistic work","Transfer in service","All the above"], ans:3},
+  {q:"Influence of Vayu Tatwa rashi on 10th house indicates:", opts:["Pilots","Philosophers","Writers","All the above"], ans:3},
+  {q:"If some native is a contractor, then his Navamsha lord of Natal 10th lord will be:", opts:["Saturn","Sun","Mars","None"], ans:2},
+  {q:"Connection of 3, 9 and 12th house with Venus indicates which profession?", opts:["Export","Fashion designing","Self promotion","All the above"], ans:3},
+  {q:"Which planet signifies Auditors?", opts:["Ketu","Venus","Mercury","Sun"], ans:2},
+  {q:"Drugged Moon is a combination of:", opts:["Doctor","Engineer","Computer","All the above"], ans:3},
+  {q:"Amatya Karak aspected or conjunct with Dara Karaka is responsible for rise in life:", opts:["True","False"], ans:0},
+  {q:"Planet for Nursing Professions is:", opts:["Mercury","Venus","Moon","Ketu"], ans:2},
+  {q:"Which Planet represents scientific organisation?", opts:["Sun","Mercury","Jupiter","Venus"], ans:2},
+  {q:"Secret missions and Services are signified by:", opts:["Mercury","Ketu","Jupiter","Sun"], ans:1},
+  {q:"If 6th lord is stronger than Lagna Lord, the person is likely to:", opts:["Be self-employed","Go for service","Become a doctor","None"], ans:1},
+  {q:"Malefics in 11th house from Arudha Lagna indicates:", opts:["Good wealth","Money from bad means","Good for gains","No wealth"], ans:0},
+  {q:"According to Varahmihir, if benefics occupy the 11th, 1st and 2nd house, the Jatak earns from:", opts:["Single source","Multiple sources","None of the above"], ans:1},
+  {q:"Ketu in 2nd house from Karakamsha Lagna can give:", opts:["Stammering","Wealth","Job","None"], ans:0},
+  {q:"Jupiter and Venus with GK indicates:", opts:["Diabetes","Mental illness","Trouble in marriage","Good lifestyle"], ans:0},
+  {q:"If 5 or more planets are in 7th to 12th houses, person is likely to be:", opts:["In service","Self-employed","Both","Cannot be judged"], ans:1},
+  {q:"3rd lord in 10th house means the native will be self-made person:", opts:["True","False"], ans:0},
+];
+
+let score = 0, answered = 0;
+
+function buildQuiz() {
+  const container = document.getElementById('quiz-container');
+  container.innerHTML = '';
+  questions.forEach((q, i) => {
+    const div = document.createElement('div');
+    div.className = 'quiz-q';
+    div.innerHTML = `
+      <div class="q-number">Q${i+1} of ${questions.length}</div>
+      <div class="q-text">${q.q}</div>
+      <div class="options" id="opts-${i}">
+        ${q.opts.map((o,j) => `<div class="option" onclick="checkAnswer(${i},${j})">${String.fromCharCode(65+j)}. ${o}</div>`).join('')}
+      </div>
+    `;
+    div.onclick = (e) => { if(e.target === div || e.target.classList.contains('q-text') || e.target.classList.contains('q-number')) toggleOpts(i); };
+    container.appendChild(div);
+  });
+}
+
+function toggleOpts(i) {
+  const opts = document.getElementById(`opts-${i}`);
+  opts.classList.toggle('show');
+}
+
+function checkAnswer(qi, optIdx) {
+  const opts = document.getElementById(`opts-${qi}`);
+  if(opts.dataset.answered) return;
+  opts.dataset.answered = true;
+  answered++;
+  const allOpts = opts.querySelectorAll('.option');
+  allOpts.forEach((el, j) => {
+    el.onclick = null;
+    if(j === questions[qi].ans) el.classList.add('correct');
+    else if(j === optIdx && optIdx !== questions[qi].ans) el.classList.add('wrong');
+    else if(j === questions[qi].ans && optIdx !== questions[qi].ans) el.classList.add('revealed');
+  });
+  if(optIdx === questions[qi].ans) score++;
+  document.getElementById('quiz-score').textContent = `Score: ${score} / ${answered} (${Math.round(score/answered*100)}%)`;
+  document.getElementById('progress-fill').style.width = `${answered/questions.length*100}%`;
+}
+
+function resetQuiz() {
+  score = 0; answered = 0;
+  document.getElementById('quiz-score').textContent = 'Score: 0 / 0';
+  document.getElementById('progress-fill').style.width = '0%';
+  buildQuiz();
+}
+
+buildQuiz();
+</script>
+</body>
+</html>
